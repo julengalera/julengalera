@@ -29,7 +29,8 @@ Currently developing **Waiia**, an AI-powered virtual waiter for modern restaura
 ---
 
 ## 📊 Stats
-<img src="https://github-readme-stats.vercel.app/api?username=julengalera&show_icons=true&theme=tokyonight" height="160px"/> 
+<img src="https://github-readme-stats.vercel.app/api?username=julengalera&show_icons=true&theme=tokyonight" height="160px"/>
+<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=julengalera&layout=compact&theme=tokyonight" height="160px"/> 
 
 ---
 
