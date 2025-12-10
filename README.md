@@ -1,38 +1,43 @@
 # 👋 Hey, I'm Julen
 
-Full Stack Developer specialized in building powerful and well-designed SaaS products. 
-Currently developing **Waiia**, an AI-powered virtual waiter for modern restaurants.
+Full Stack Engineer focused on building reliable, scalable and well-designed software products.  
+Currently developing **Waiia**, an AI-powered virtual waiter that helps modern restaurants enhance customer experience and streamline menu management.
 
 ---
 
 ## 💡 About Me
-- 🎓 Software Engineer (Polytechnic University of Catalonia - UPC)
-- 💼 Experience at EY as a Full Stack Developer
-- 🌍 Now focused on projects with React, Node.js, Express, and PostgreSQL
-- ⚙️ Passionate about creating software that’s useful, purposeful, and well-architected
+- Software Engineer (UPC – Polytechnic University of Catalonia)
+- Professional experience as a Full Stack Developer at EY
+- Specializing in **React, Next.js, Node.js, TypeScript and PostgreSQL**
+- Strong interest in clean architecture, scalable systems and product-oriented development
+- Building real SaaS projects while strengthening my engineering fundamentals
 
 ---
 
-## 🧠 Current Stack
-**Frontend:** React (Next.js), TypeScript  
+## 🧠 Tech Stack
+**Frontend:** React, Next.js, TypeScript  
 **Backend:** Node.js (Express), PostgreSQL  
-**IA & APIs:** OpenAI API
-**Infra:** Vercel, Supabase, Docker, GitHub Actions  
+**AI & APIs:** OpenAI API  
+**Infra & DevOps:** Docker, GitHub Actions, CI/CD, Vercel, AWS, Supabase 
 
 ---
 
-## 🚀 Featured Projects
+## 🚀 Projects
 | Project | Description | Stack |
-|-----------|--------------|-------|
-| **Waiia** | SaaS integrating AI into restaurants, with chat, metrics, and smart branding | Next.js, Express, OpenAI, PostgreSQL |
+|--------|-------------|-------|
+| **Waiia** | AI-powered SaaS for restaurants: smart menus, chat assistant, analytics and modern branding tools | Next.js, Express, PostgreSQL, OpenAI, Docker |
+
+*(More projects coming soon as part of my full-stack engineering roadmap.)*
 
 ---
 
-## 📊 Stats
+## 📊 GitHub Stats
 <img src="https://github-readme-stats.vercel.app/api?username=julengalera&show_icons=true&theme=tokyonight" height="160px"/>
-<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=julengalera&layout=compact&theme=tokyonight" height="160px"/> 
+<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=julengalera&layout=compact&theme=tokyonight" height="160px"/>
 
 ---
 
-## 🤝 Connect With Me
-[LinkedIn](https://es.linkedin.com/in/julengalera) | [Email](mailto:julen.galera.dev@gmail.com) | [Portfolio](https://julengalera.dev)
+## 🤝 Connect
+[LinkedIn](https://linkedin.com/in/julengalera) ·  
+[Email](mailto:julen.galera.dev@gmail.com) ·  
+[Portfolio](https://julengalera.dev)
