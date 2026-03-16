@@ -1,68 +1,71 @@
 # 👋 Hey, I'm Julen
 
-Full Stack Engineer building **Waiia**, an AI-powered SaaS for restaurants.  
-Former Full Stack Developer at **EY** | Software Engineer (UPC)  
-Focused on shipping production-ready applications with modern, scalable architecture.
+Software Engineer building **Waiia**, an AI-powered SaaS for restaurants.
+3+ years at **EY** building microservices for a global hotel booking platform.
+Focused on backend architecture, distributed systems, and shipping production-grade software.
 
 ---
 
 ## 💡 About Me
-- 🎓 **Software Engineering** – UPC (Polytechnic University of Catalonia)
-- 💼 **Professional Experience** – Full Stack Developer at EY
-- 🚀 **Currently Building** – Waiia (AI-powered virtual waiter SaaS)
-- 🛠️ **Core Skills** – TypeScript, React, Next.js, Node.js, PostgreSQL, Docker, AWS
-- 🎯 **Focus** – Clean architecture, scalable systems, and shipping real products
+- 🎓 **Computer Engineering** – UPC (Polytechnic University of Catalonia)
+- 💼 **Software Engineer at EY** – Migrating a monolithic booking platform (530+ properties, 56 countries) to microservices
+- 🚀 **Currently Building** – Waiia (AI-powered restaurant SaaS) with Java 21 & Spring Boot 3
+- 🛠️ **Core Stack** – Java, Spring Boot, PostgreSQL, Redis, AWS, Docker, TypeScript, React, Vue.js
+- 🎯 **Focus** – Microservices architecture, API design, system design, and delivering end-to-end features
 
 ---
 
 ## 🧠 Tech Stack
 
-**Frontend:**  
-React, Next.js 14 (App Router), TypeScript, Tailwind CSS, shadcn/ui, React Query, Zod
+**Backend & Architecture:**
+Java 21, Spring Boot 3, Spring Security, Microservices, REST APIs, API Gateway, PostgreSQL, Redis, Flyway, JWT Auth, Hibernate/JPA
 
-**Backend:**  
-Node.js, Express, TypeScript, Prisma ORM, PostgreSQL, Redis
+**Frontend:**
+Vue.js, Nuxt.js, React, Next.js, TypeScript, Tailwind CSS, shadcn/ui
 
-**AI & Integration:**  
-Claude AI (Anthropic Sonnet 4), REST APIs, JWT Authentication
+**Cloud & DevOps:**
+AWS (ECS, RDS, ElastiCache, S3, EC2), Terraform, Docker, GitHub Actions, CI/CD
 
-**DevOps & Infrastructure:**  
-Docker, Docker Compose, AWS (RDS, EC2, ElastiCache, S3), GitHub Actions, Vercel
+**AI & Integration:**
+REST API design, Event-driven patterns
 
 ---
 
 ## 🚀 Featured Project: Waiia
 
-**AI-Powered Virtual Waiter SaaS for Restaurants**
+**AI-Powered Restaurant SaaS Platform**
 
-A complete production SaaS with:
-- ✅ **Backend API** – Express + TypeScript + Prisma ORM
-- ✅ **Database** – PostgreSQL with optimized schema and migrations
-- ✅ **Caching** – Redis for API response optimization
-- ✅ **AI Integration** – Claude Sonnet 4 for intelligent customer chat
-- ✅ **Authentication** – JWT with bcrypt password hashing
-- ✅ **Validation** – Zod schemas for type-safe data handling
-- ✅ **Containerization** – Docker for local dev + production deployment
-- ✅ **Infrastructure** – AWS (RDS, ElastiCache, EC2) deployment-ready
+A full-stack SaaS enabling restaurants to provide AI-powered ordering and customer assistance via QR codes. Designed and built solo from architecture to deployment.
 
-**Stack:**  
-Next.js 14, TypeScript, Express, Prisma, PostgreSQL, Redis, Claude AI, Docker, AWS
+**Backend (Java 21 + Spring Boot 3):**
+- ✅ **Modular Monolith** – Clean module boundaries, ready to extract microservices when needed
+- ✅ **Auth System** – JWT access/refresh tokens, Redis blacklisting, per-device revocation, rate limiting (Bucket4j)
+- ✅ **Database** – PostgreSQL with Flyway migrations, optimized indexes, JSONB for semi-structured menu data
+- ✅ **Caching** – Multi-tier Redis caching strategy for sub-500ms responses and API cost optimization
+- ✅ **Infrastructure as Code** – Terraform (VPC, ECS Fargate, RDS, ElastiCache, S3)
+- ✅ **AI Integration** – Claude API for intelligent natural language ordering
+- ✅ **CI/CD** – GitHub Actions → Docker → ECR → ECS
 
-**Status:** Backend complete (API functional), frontend in development
+**Frontend (React + TypeScript):**
+- ✅ **Customer App** – QR-based ordering interface with real-time AI chat
+- ✅ **Restaurant Dashboard** – Menu management, order tracking, analytics
+
+**Stack:**
+Java 21, Spring Boot 3, PostgreSQL, Redis, Flyway, JWT, Terraform, AWS, Docker, React, TypeScript
 
 [🔗 View Repository](https://github.com/julengalera/waiia)
 
 ---
 
-## 📈 What I'm Learning & Building
+## 📈 What I'm Working On
 
-- **Production DevOps** – Docker containerization, AWS deployment (RDS, EC2, ElastiCache)
-- **AI Integration** – Working with Claude API for conversational AI
-- **Database Optimization** – Prisma migrations, query optimization, N+1 prevention
-- **System Design** – Scalable architecture for multi-tenant SaaS
-- **Modern Frontend** – Next.js 14 App Router, Server Components, React Query
+- **System Design** – Modular monolith → microservices extraction patterns, distributed caching, API gateway design
+- **Java 21 Deep Dive** – Virtual Threads, Records, Sealed Classes, Pattern Matching
+- **Infrastructure** – Terraform for AWS, container orchestration, blue/green deployments
+- **Backend Architecture** – Clean Architecture, DDD patterns, transactional boundaries, contract testing
+- **AI Integration** – Building production AI features with Claude API
 
-**Not just learning – shipping real, production-grade code.**
+**Not just learning — shipping real, production-grade systems.**
 
 ---
 
@@ -77,4 +80,4 @@ Next.js 14, TypeScript, Express, Prisma, PostgreSQL, Redis, Claude AI, Docker, A
 
 [LinkedIn](https://linkedin.com/in/julengalera) · [Email](mailto:julen.galera.dev@gmail.com) · [Portfolio](https://julengalera.dev)
 
-**Open to opportunities** in Full Stack Engineering, SaaS development, and AI integration.
+**Open to opportunities** in Software Engineering, backend-heavy roles, travel-tech, and platforms at scale.
