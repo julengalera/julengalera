@@ -2,14 +2,14 @@
 
 Backend-heavy Software Engineer with 3+ years at **EY** building microservices for a global hotel booking platform (530+ properties, 56 countries). Currently building **Ploma**, a B2B SaaS that uses AI to generate regulatory compliance reports for architects.
 
-I design and ship production systems end-to-end — from distributed backends to LLM-powered pipelines. Available for freelance contracts with international teams.
+I design and ship production systems end-to-end, from distributed backends to LLM-powered pipelines. Available for freelance contracts with international teams.
 
 ---
 
 ## 💡 About Me
 - 🎓 **Computer Engineering** – UPC (Polytechnic University of Catalonia)
 - 💼 **3+ years at EY** – Migrating a monolithic booking platform to microservices (Java 21, Spring Boot 3, AWS, 56 countries)
-- 🚀 **Currently Building** – Ploma (AI-powered compliance SaaS) — solo founder & full-stack engineer
+- 🚀 **Currently Building** – [Ploma](https://ploma.es) (AI-powered compliance SaaS), solo founder & full-stack engineer
 - 🛠️ **Core Stack** – Java, Spring Boot, TypeScript, Next.js, PostgreSQL, AWS, LLM orchestration
 - 🎯 **Focus** – Backend architecture, distributed systems, AI/LLM engineering, system design
 
@@ -38,16 +38,16 @@ Stripe (subscriptions, one-off packs, webhooks, portal)
 
 **AI-Powered Technical Compliance Reports for Spanish Architects**
 
-A full-stack B2B SaaS that generates *memorias técnicas* — the legal documents architects must submit to prove their building projects comply with the CTE (Código Técnico de la Edificación). Built solo from corpus ingestion to production deployment.
+A full-stack B2B SaaS that generates *memorias técnicas*, the legal documents architects must submit to prove their building projects comply with the CTE (Código Técnico de la Edificación). Built solo from corpus ingestion to production deployment.
 
 **RAG & AI Pipeline:**
 - ✅ **Normative Corpus** – 9 DBs of Spanish building code (PDF → Markdown → enriched chunks → pgvector embeddings)
 - ✅ **Hybrid Retrieval** – Vector search + BM25/FTS with Reciprocal Rank Fusion, hierarchical expansion (parent/child/sibling), cross-references
 - ✅ **Multi-Model Router** – Intelligent classifier (3 parallel Haiku sub-calls) decides archetype, model, depth, and retrieval strategy per query
-- ✅ **Agentic RAG** – Tools for terminology (Anejo A), official comments, and chunk recall — LLM fetches on demand via manifests
+- ✅ **Agentic RAG** – Tools for terminology (Anejo A), official comments, and chunk recall. LLM fetches on demand via manifests
 - ✅ **Cohere Rerank** – Cross-encoder scoring with per-subquery reranking and star-threshold selection
-- ✅ **Dynamic Cap** – Kneedle elbow detection + marginal utility + coverage floor (replaces fixed token caps)
-- ✅ **Conversational Memory** – Rolling thread summary + chunk recall manifest + anti-ambiguity continuation (Phases 0-3 verified live)
+- ✅ **Dynamic Cap** – Kneedle elbow detection + marginal utility + coverage floor, replaces fixed token caps
+- ✅ **Conversational Memory** – Rolling thread summary + chunk recall manifest + anti-ambiguity continuation, verified live
 
 **Report Generator:**
 - ✅ **Rule-Based Index Engine** – YAML rules decide which sections apply to each project (use, geometry, location)
@@ -65,7 +65,7 @@ A full-stack B2B SaaS that generates *memorias técnicas* — the legal document
 - ✅ **Chat API** – Standalone Fastify service on ECS Fargate (eu-south-2), ALB + custom domain (api.ploma.es)
 - ✅ **Circuit Breaker** – Per-provider (Anthropic, OpenAI, Cohere) with shared state in Supabase + active probing
 - ✅ **Billing** – Stripe integration (subscription tiers + one-off packs), daily token budget gating
-- ✅ **Dataset Flywheel** – Every generation/chat/audit captured for future fine-tuning (fail-safe, never blocks main flow)
+- ✅ **Dataset Flywheel** – Every generation/chat/audit captured for future fine-tuning, fail-safe, never blocks main flow
 
 **Stack:**
 TypeScript, Next.js 16, React 19, Tailwind 4, Supabase (Postgres + pgvector), AWS Bedrock (Claude), ECS Fargate, Cohere, OpenAI Embeddings, Stripe, Docker
@@ -80,7 +80,7 @@ TypeScript, Next.js 16, React 19, Tailwind 4, Supabase (Postgres + pgvector), AW
 - **Enterprise RAG** – Hybrid retrieval (vector + lexical + RRF), dynamic context selection, agentic tool use
 - **Infrastructure** – ECS auto-scaling, circuit breakers, Terraform, container orchestration, streaming APIs
 
-**Not just prototyping — shipping production systems that handle real scale and real compliance.**
+**Not just prototyping. Shipping production systems that handle real scale and real compliance.**
 
 ---
 
@@ -97,7 +97,7 @@ I take on freelance contracts for backend engineering, AI/LLM integration, and s
 
 **What I can help with:**
 - Backend architecture & API design (Java/Spring Boot or TypeScript/Node.js)
-- LLM-powered features — RAG pipelines, multi-model orchestration, production AI systems
+- LLM-powered features: RAG pipelines, multi-model orchestration, production AI systems
 - System design & infrastructure (AWS, Terraform, containerized deployments)
 - Migrating monoliths to microservices
 
@@ -107,6 +107,6 @@ I take on freelance contracts for backend engineering, AI/LLM integration, and s
 
 ## 🤝 Let's Connect
 
-[LinkedIn](https://linkedin.com/in/julengalera) · [Email](mailto:julen.galera.dev@gmail.com) · [Portfolio](https://julengalera.dev)
+[LinkedIn](https://linkedin.com/in/julengalera) · [Email](mailto:julen.galera.dev@gmail.com) · [Ploma](https://ploma.es)
 
-**Open to freelance contracts** — backend-heavy, AI/LLM engineering, or senior full-stack roles with international teams.
+**Open to freelance contracts.** Backend-heavy, AI/LLM engineering, or senior full-stack roles with international teams.
