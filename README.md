@@ -1,112 +1,60 @@
-# 👋 Hey, I'm Julen
+# Julen Galera · Senior Full-Stack Engineer
 
-Backend-heavy Software Engineer with 3+ years at **EY** building microservices for a global hotel booking platform (530+ properties, 56 countries). Currently building **Ploma**, a B2B SaaS that uses AI to generate regulatory compliance reports for architects.
+**TypeScript / React / Node / AWS · Booking & transactional systems · Production LLM/RAG**
 
-I design and ship production systems end-to-end, from distributed backends to LLM-powered pipelines. Available for freelance contracts with international teams.
+I build systems where correctness is money: booking platforms where a race condition means a double-booked hotel room, and AI products where a wrong citation means a legal problem.
 
----
-
-## 💡 About Me
-- 🎓 **Computer Engineering** – UPC (Polytechnic University of Catalonia)
-- 💼 **3+ years at EY** – Migrating a monolithic booking platform to microservices (Java 21, Spring Boot 3, AWS, 56 countries)
-- 🚀 **Currently Building** – [Ploma](https://ploma.es) (AI-powered compliance SaaS), solo founder & full-stack engineer
-- 🛠️ **Core Stack** – Java, Spring Boot, TypeScript, Next.js, PostgreSQL, AWS, LLM orchestration
-- 🎯 **Focus** – Backend architecture, distributed systems, AI/LLM engineering, system design
+- **4+ years at EY:** engineering the central reservations platform of one of the world's largest hotel chains (530+ properties, 56 countries). Monolith → microservices, multi-currency, high availability.
+- **Founder of [Ploma](https://ploma.es):** an AI copilot for Spanish building regulations. Designed, built and operated solo, from corpus ingestion to production infrastructure and billing.
 
 ---
 
-## 🧠 Tech Stack
+## Featured work
 
-**Backend & Architecture:**
-Java 21, Spring Boot 3, TypeScript, Node.js, Fastify, Next.js 16, Microservices, REST APIs, API Gateway, PostgreSQL, Redis, Supabase (RLS + pgvector), Hibernate/JPA, Flyway, streaming (NDJSON), circuit breakers
+### 🏨 Global booking platform (EY, enterprise client)
 
-**AI & LLM Engineering:**
-Claude Opus/Sonnet/Haiku (via AWS Bedrock), OpenAI Embeddings, RAG (hybrid vector + BM25/FTS + RRF), Cohere Rerank, pgvector, agentic tool use, prompt engineering, multi-model orchestration
+Migration of booking-critical B2B reservation flows from a legacy monolith to independently deployable services, in a platform running across 56 markets.
 
-**Frontend:**
-React 19, Vue.js, Nuxt.js, Tailwind CSS, TypeScript, Server Components, shadcn/ui
+- Complete modules built end to end: Spring Boot APIs + Vue/Nuxt frontends
+- Designed and implemented the API of a corporate events & group reservation system used by enterprise clients
+- Daily contact with what makes this domain hard: live inventory, overbooking rules, channel managers, multi-currency pricing
 
-**Cloud & DevOps:**
-AWS (ECS Fargate, ECR, ALB, Bedrock, RDS, ElastiCache, S3, CloudWatch), Terraform, Vercel, Docker, GitHub Actions, CI/CD
+*Code is proprietary. An architecture case study (decisions, trade-offs, diagrams) is on its way. Ask me about it.*
 
-**Payments & Billing:**
-Stripe (subscriptions, one-off packs, webhooks, portal)
+### 🤖 Ploma: production RAG that cites the law, verbatim
 
----
+Spanish architects must legally justify building-code compliance against a 2,000+ page corpus. Generic LLMs hallucinate regulations; in compliance, "probably right" is worthless. Ploma answers regulatory queries and generates technical reports with **verifiable, article-level citations**.
 
-## 🚀 Featured Project: Ploma
+Architecture highlights:
 
-**AI-Powered Technical Compliance Reports for Spanish Architects**
+- **Hybrid retrieval:** pgvector + BM25/full-text fused with Reciprocal Rank Fusion, hierarchical chunk expansion (parent/child/sibling) and cross-references
+- **Multi-model orchestration:** a lightweight classifier routes every query (model, depth, retrieval strategy) before spending expensive tokens
+- **Agentic RAG:** the LLM pulls terminology, official ministry commentary and previously seen chunks on demand via tools
+- **Quality loop:** an async auditor scores every answer post-stream against hallucination and failure modes; every interaction is captured for future fine-tuning
+- **Resilience:** per-provider circuit breakers (Anthropic, OpenAI, Cohere) with shared state and active probing
+- **Business layer:** Stripe subscriptions and usage gating from day one
 
-A full-stack B2B SaaS that generates *memorias técnicas*, the legal documents architects must submit to prove their building projects comply with the CTE (Código Técnico de la Edificación). Built solo from corpus ingestion to production deployment.
-
-**RAG & AI Pipeline:**
-- ✅ **Normative Corpus** – 9 DBs of Spanish building code (PDF → Markdown → enriched chunks → pgvector embeddings)
-- ✅ **Hybrid Retrieval** – Vector search + BM25/FTS with Reciprocal Rank Fusion, hierarchical expansion (parent/child/sibling), cross-references
-- ✅ **Multi-Model Router** – Intelligent classifier (3 parallel Haiku sub-calls) decides archetype, model, depth, and retrieval strategy per query
-- ✅ **Agentic RAG** – Tools for terminology (Anejo A), official comments, and chunk recall. LLM fetches on demand via manifests
-- ✅ **Cohere Rerank** – Cross-encoder scoring with per-subquery reranking and star-threshold selection
-- ✅ **Dynamic Cap** – Kneedle elbow detection + marginal utility + coverage floor, replaces fixed token caps
-- ✅ **Conversational Memory** – Rolling thread summary + chunk recall manifest + anti-ambiguity continuation, verified live
-
-**Report Generator:**
-- ✅ **Rule-Based Index Engine** – YAML rules decide which sections apply to each project (use, geometry, location)
-- ✅ **Opus 4.7 Redactor** – Generates normative justifications citing retrieved chunks with strict tool use
-- ✅ **Warning System** – LLM-detected inconsistencies, missing data, potential non-compliance
-
-**Chat Consultant:**
-- ✅ **Multi-Pregunta Fan-Out** – Parallel retrieval per sub-question with Jaccard clustering
-- ✅ **4-Level Post-Retrieval Filter** – Haiku categorizes chunks as CRITICO/CONTEXTO/TANGENCIAL/BASURA
-- ✅ **Anti-Sycophancy** – Evidence-first verification, anti-hallucination guardrails, Path C for accusations
-- ✅ **Silent Auditor** – Post-stream Haiku audit on 5 dimensions + 9 failure modes (async worker)
-- ✅ **Multimodal** – Figures from normative documents served as images to the LLM
-
-**Infrastructure:**
-- ✅ **Chat API** – Standalone Fastify service on ECS Fargate (eu-south-2), ALB + custom domain (api.ploma.es)
-- ✅ **Circuit Breaker** – Per-provider (Anthropic, OpenAI, Cohere) with shared state in Supabase + active probing
-- ✅ **Billing** – Stripe integration (subscription tiers + one-off packs), daily token budget gating
-- ✅ **Dataset Flywheel** – Every generation/chat/audit captured for future fine-tuning, fail-safe, never blocks main flow
-
-**Stack:**
-TypeScript, Next.js 16, React 19, Tailwind 4, Supabase (Postgres + pgvector), AWS Bedrock (Claude), ECS Fargate, Cohere, OpenAI Embeddings, Stripe, Docker
+**Stack:** TypeScript · Next.js · React · Supabase (Postgres + pgvector) · AWS Bedrock (Claude) · ECS Fargate · Cohere · Stripe · Docker
 
 ---
 
-## 📈 What I'm Working On
+## How I work
 
-- **Backend Architecture** – Microservices, API design, distributed caching, transactional boundaries, DDD patterns
-- **System Design** – Modular monolith → microservices extraction, API gateway design, blue/green deployments
-- **LLM Systems at Scale** – Multi-model orchestration, prompt caching, cost/quality tradeoffs in production RAG
-- **Enterprise RAG** – Hybrid retrieval (vector + lexical + RRF), dynamic context selection, agentic tool use
-- **Infrastructure** – ECS auto-scaling, circuit breakers, Terraform, container orchestration, streaming APIs
+Small PRs, strict types (`strict`, `noUncheckedIndexedAccess`), tests where they pay for themselves, clean commit history, and documentation the next engineer will thank you for. In contracting you're judged by your diff, so I write mine accordingly.
 
-**Not just prototyping. Shipping production systems that handle real scale and real compliance.**
+## Stack
 
----
-
-## 📊 GitHub Stats
-
-<img src="https://github-readme-stats.vercel.app/api?username=julengalera&show_icons=true&theme=tokyonight" height="160px"/>
-<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=julengalera&layout=compact&theme=tokyonight" height="160px"/>
+- **Backend:** Node.js, Fastify, Java 21, Spring Boot 3, PostgreSQL, Redis, REST APIs, microservices
+- **Frontend:** React 19, Next.js, Vue/Nuxt, TypeScript, Tailwind, shadcn/ui
+- **AI/LLM:** Claude (AWS Bedrock), OpenAI embeddings, hybrid RAG (pgvector + BM25 + RRF), Cohere Rerank, agentic tool use, multi-model orchestration
+- **Cloud & delivery:** AWS (ECS Fargate, RDS, ElastiCache, S3, CloudWatch, Bedrock), Terraform, Docker, GitHub Actions, Vercel
 
 ---
 
-## 💼 Available for Freelance
+## Availability
 
-I take on freelance contracts for backend engineering, AI/LLM integration, and system design. Based in Spain (CET), fluent in English and Spanish, experienced working with distributed international teams.
+✅ **Available for B2B contracts.** Remote, based in Madrid (CET), full UK/EU overlap. Fluent English & Spanish.
 
-**What I can help with:**
-- Backend architecture & API design (Java/Spring Boot or TypeScript/Node.js)
-- LLM-powered features: RAG pipelines, multi-model orchestration, production AI systems
-- System design & infrastructure (AWS, Terraform, containerized deployments)
-- Migrating monoliths to microservices
+Best fit: backend or full-stack contract work with teams in 🇬🇧 UK, 🇳🇱 Netherlands, 🇩🇪 Germany, or remote-first companies anywhere. Especially booking/transactional platforms and production LLM features.
 
-**Ideal engagement:** contract/freelance with teams in 🇩🇪 Germany, 🇬🇧 UK, 🇺🇸 USA, or remote-first companies. Happy to work async across timezones.
-
----
-
-## 🤝 Let's Connect
-
-[LinkedIn](https://linkedin.com/in/julengalera) · [Email](mailto:julen.galera.dev@gmail.com) · [Ploma](https://ploma.es)
-
-**Open to freelance contracts.** Backend-heavy, AI/LLM engineering, or senior full-stack roles with international teams.
+[LinkedIn](https://linkedin.com/in/julengalera) · [julen.galera.dev@gmail.com](mailto:julen.galera.dev@gmail.com) · [ploma.es](https://ploma.es)
